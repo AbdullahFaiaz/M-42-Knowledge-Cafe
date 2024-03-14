@@ -1,0 +1,48 @@
+[
+    {
+    "id": 1,
+    "cover": "https://i.ibb.co/31DqMpF/Cover.jpg",
+    "title": "The Secret Garden",
+    "author": "Frances Hodgson Burnett",
+    "author_img": "https://i.ibb.co/1f1MShr/Author.jpg",
+    "posted_date": "2024-03-14",
+    "reading_time": 20
+    },
+
+    {
+    "id": 2,
+    "cover": "https://i.ibb.co/31DqMpF/Cover.jpg",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "author_img": "https://i.ibb.co/1f1MShr/Author.jpg",
+    "posted_date": "2024-03-13",
+    "reading_time": 25
+    },
+    {
+    "id": 3,
+    "cover": "https://i.ibb.co/31DqMpF/Cover.jpg",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "author_img": "https://i.ibb.co/1f1MShr/Author.jpg",
+    "posted_date": "2024-03-12",
+    "reading_time": 30
+    },
+    {
+    "id": 4,
+    "cover": "https://i.ibb.co/31DqMpF/Cover.jpg",
+    "title": "1984",
+    "author": "George Orwell",
+    "author_img": "https://i.ibb.co/1f1MShr/Author.jpg",
+    "posted_date": "2024-03-11",
+    "reading_time": 15
+    },
+    {
+    "id": 5,
+    "cover": "https://i.ibb.co/31DqMpF/Cover.jpg",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "author_img": "https://i.ibb.co/1f1MShr/Author.jpg",
+    "posted_date": "2024-03-10",
+    "reading_time": 22
+    }
+]
