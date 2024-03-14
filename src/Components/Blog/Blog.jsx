@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { FaRegBookmark } from "react-icons/fa";
 
 
-const Blog = ({handleClick,blog}) => {
+const Blog = ({handleTime,handleClick,blog}) => {
     const {cover,title,author_img,author,posted_date,reading_time,hashtags} = blog 
     const [isBooked,setBooked] = useState(false)
     const handleBooked= () => {
@@ -14,7 +14,10 @@ const Blog = ({handleClick,blog}) => {
         handleClick(blog,isBooked) 
         handleBooked()
     }
-
+    const [isRead,setIsRead] = useState(false)
+    const handleIsRead= () =>{
+        setIsRead(!isRead)
+    }
 
     return (
         <div>
@@ -42,7 +45,10 @@ const Blog = ({handleClick,blog}) => {
                         hashtags.map((get,idx)=> <span key={idx}><a href="">#{get}</a> </span>)
                     }
                 </div>
-                
+                <button className={`text-blue-400 underline ${isRead || "text-red-800"}`} onClick={()=> {
+                    handleTime(reading_time,isRead)
+                    handleIsRead()
+                    }}>{!isRead? "Mark as Read":"Mark as unread"}</button>
             </div>
         </div>
     );
@@ -50,6 +56,7 @@ const Blog = ({handleClick,blog}) => {
 
 Blog.propTypes ={
     blog: PropTypes.object,
-    handleClick: PropTypes.func
+    handleClick: PropTypes.func,
+    handleTime: PropTypes.func
 }
 export default Blog;

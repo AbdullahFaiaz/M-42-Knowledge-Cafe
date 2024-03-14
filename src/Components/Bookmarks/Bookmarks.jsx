@@ -1,18 +1,14 @@
-import PropTypes from 'prop-types';
-const Bookmarks = ({bookmarks}) => {
+import PropTypes from 'prop-types'
+import Booked from '../Booked/Booked';
+const Bookmarks = ({readTime,bookmarks}) => {
     
     return (
         <div className="bg-red-200 md:w-[35%]">
+            <h2>Time: {readTime}</h2>
             <h2>Bookmarked Blogs:{bookmarks.length}</h2>
 
             {
-                bookmarks.map((get,idx)=> {
-                    return(
-                    <div className='m-1 rounded-md bg-white' key={idx}>
-                        {get.title}
-                    </div>
-                    )
-                })
+                bookmarks.map((booked,idx)=> <Booked key={idx} booked={booked}></Booked>) 
             }
 
         </div>
@@ -23,6 +19,7 @@ const Bookmarks = ({bookmarks}) => {
     );
 };
 Bookmarks.propTypes = {
-    bookmarks: PropTypes.array
+    bookmarks: PropTypes.array,
+    readTime: PropTypes.number
 }
 export default Bookmarks;

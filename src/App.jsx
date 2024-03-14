@@ -21,14 +21,26 @@ function App() {
 
   }
 
+  const [readTime, setReadTime] = useState(0)
+  const handleTime= (time,isRead) =>{
+    if(!isRead){
+      const newTime = readTime+time
+      setReadTime(newTime)
+    }
+    if(isRead){
+      const newTime = readTime - time;
+      setReadTime(newTime)
+    }
+  }
+
 
   return (
     <>
     <div className='exo-normal'>
     <Header></Header>
     <section className='w-[90%] md:w-[80%] mx-auto md:flex md:gap-[3vw]'>
-      <Blogs handleClick={handleClick}></Blogs>
-      <Bookmarks bookmarks={bookmarks}></Bookmarks>
+      <Blogs handleTime={handleTime} handleClick={handleClick}></Blogs>
+      <Bookmarks readTime={readTime} bookmarks={bookmarks}></Bookmarks>
 
     </section>t
     </div>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import Blog from "../Blog/Blog";
 import PropTypes from 'prop-types'; // ES6
 
-const Blogs = ({handleClick}) => {
+const Blogs = ({handleTime,handleClick}) => {
     
     const [blogs, setBlogs] = useState([])
     useEffect(()=>{
@@ -17,7 +17,7 @@ const Blogs = ({handleClick}) => {
             
             Length: {blogs.length}
             {
-                blogs.map(blog=> <Blog key={blog.id} handleClick={handleClick} blog={blog}></Blog>)
+                blogs.map(blog=> <Blog key={blog.id} handleTime={handleTime} handleClick={handleClick} blog={blog}></Blog>)
             }
         </div>
 
