@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import Blog from "../Blog/Blog";
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([])
@@ -14,7 +15,7 @@ const Blogs = () => {
             
             Length: {blogs.length}
             {
-                blogs.map(get=> <img key={get.id} src={get.cover} alt="img" />)
+                blogs.map(blog=> <Blog key={blog.id} blog={blog}></Blog>)
             }
         </div>
 
