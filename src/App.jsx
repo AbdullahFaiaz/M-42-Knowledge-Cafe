@@ -11,7 +11,7 @@ function App() {
     <>
     <div className='exo-normal'>
     <Header></Header>
-    <section className='w-[90%] mx-auto md:flex'>
+    <section className='w-[90%] md:w-[80%] mx-auto md:flex md:gap-[3vw]'>
       <Blogs></Blogs>
       <Bookmarks></Bookmarks>
     </section>t

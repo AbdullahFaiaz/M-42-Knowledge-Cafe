@@ -6,7 +6,8 @@
     "author": "Frances Hodgson Burnett",
     "author_img": "https://i.ibb.co/1f1MShr/Author.jpg",
     "posted_date": "2024-03-14",
-    "reading_time": 20
+    "reading_time": 20,
+    "hashtags": ["fiction", "dystopian", "surveillance"]
     },
 
     {
@@ -16,7 +17,8 @@
     "author": "Harper Lee",
     "author_img": "https://i.ibb.co/1f1MShr/Author.jpg",
     "posted_date": "2024-03-13",
-    "reading_time": 25
+    "reading_time": 25,
+    "hashtags": ["fiction", "classic", "social_justice"]
     },
     {
     "id": 3,
@@ -25,7 +27,8 @@
     "author": "Jane Austen",
     "author_img": "https://i.ibb.co/1f1MShr/Author.jpg",
     "posted_date": "2024-03-12",
-    "reading_time": 30
+    "reading_time": 30,
+    "hashtags": ["fiction", "classics", "gardening"]
     },
     {
     "id": 4,
@@ -34,7 +37,8 @@
     "author": "George Orwell",
     "author_img": "https://i.ibb.co/1f1MShr/Author.jpg",
     "posted_date": "2024-03-11",
-    "reading_time": 15
+    "reading_time": 15,
+    "hashtags": ["fiction", "dystopian", "surveillance"]
     },
     {
     "id": 5,
@@ -43,6 +47,7 @@
     "author": "F. Scott Fitzgerald",
     "author_img": "https://i.ibb.co/1f1MShr/Author.jpg",
     "posted_date": "2024-03-10",
-    "reading_time": 22
+    "reading_time": 22,
+    "hashtags": ["fiction", "classic", "social_justice"]
     }
 ]
