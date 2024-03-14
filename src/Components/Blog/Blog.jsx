@@ -1,9 +1,21 @@
 import PropTypes from 'prop-types'; // ES6
+import { useState } from 'react';
 // import cover from '../../assets/images/boy1.png'
 import { FaRegBookmark } from "react-icons/fa";
 
-const Blog = ({blog}) => {
+
+const Blog = ({handleClick,blog}) => {
     const {cover,title,author_img,author,posted_date,reading_time,hashtags} = blog 
+    const [isBooked,setBooked] = useState(false)
+    const handleBooked= () => {
+        setBooked(!isBooked)
+    }
+    const allClicks = () => {
+        handleClick(blog) 
+        handleBooked()
+    }
+
+
     return (
         <div>
             <div className='sm:mb-[4vw] mb-[10vw]'>
@@ -20,7 +32,7 @@ const Blog = ({blog}) => {
                         </div>
                     </div>
                     <div className='flex items-center gap-1'>
-                        <div>{`${reading_time} times read`}</div><FaRegBookmark />
+                        <div>{`${reading_time} times read`}</div> <button onClick={allClicks} className={`${isBooked? "text-red-800" : "text-black"} text-2xl sm:text-4xl`}><FaRegBookmark /></button>
                     </div>
 
                 </div>
@@ -37,6 +49,7 @@ const Blog = ({blog}) => {
 };
 
 Blog.propTypes ={
-    blog: PropTypes.object
+    blog: PropTypes.object,
+    handleClick: PropTypes.func
 }
 export default Blog;
