@@ -11,7 +11,7 @@ const Blog = ({handleClick,blog}) => {
         setBooked(!isBooked)
     }
     const allClicks = () => {
-        handleClick(blog) 
+        handleClick(blog,isBooked) 
         handleBooked()
     }
 

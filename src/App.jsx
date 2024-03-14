@@ -7,9 +7,18 @@ import Header from './Components/Header/Header'
 
 function App() {
   const [bookmarks,setBookmarks] = useState([])
-  const handleClick= (book) =>{
-    const newClick = [...bookmarks,book]
-    setBookmarks(newClick)
+  const handleClick= (book,isBooked) =>{
+    if(!isBooked){
+      const newBookmarks = [...bookmarks,book]
+      setBookmarks(newBookmarks)
+    }
+    if(isBooked){
+      if(bookmarks.length!==0){
+        const afterRemove = bookmarks.filter(items => items !== book)
+        setBookmarks(afterRemove)
+      }
+    }
+
   }
 
 
