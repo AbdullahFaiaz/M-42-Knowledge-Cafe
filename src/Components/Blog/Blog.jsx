@@ -1,23 +1,16 @@
 import PropTypes from 'prop-types'; // ES6
-import { useState } from 'react';
 // import cover from '../../assets/images/boy1.png'
 import { FaRegBookmark } from "react-icons/fa";
 
 
-const Blog = ({handleTime,handleClick,blog}) => {
+const Blog = ({handleTime,handleClick,blog,handleRem,handleIsRead,isRead,handleBooked,isBooked}) => {
     const {cover,title,author_img,author,posted_date,reading_time,hashtags} = blog 
-    const [isBooked,setBooked] = useState(false)
-    const handleBooked= () => {
-        setBooked(!isBooked)
-    }
+
     const allClicks = () => {
         handleClick(blog,isBooked) 
         handleBooked()
     }
-    const [isRead,setIsRead] = useState(false)
-    const handleIsRead= () =>{
-        setIsRead(!isRead)
-    }
+
 
     return (
         <div>
@@ -48,6 +41,7 @@ const Blog = ({handleTime,handleClick,blog}) => {
                 <button className={`text-blue-400 underline ${isRead || "text-red-800"}`} onClick={()=> {
                     handleTime(reading_time,isRead)
                     handleIsRead()
+                    handleRem(blog,isBooked)
                     }}>{!isRead? "Mark as Read":"Mark as unread"}</button>
             </div>
         </div>
@@ -57,6 +51,11 @@ const Blog = ({handleTime,handleClick,blog}) => {
 Blog.propTypes ={
     blog: PropTypes.object,
     handleClick: PropTypes.func,
-    handleTime: PropTypes.func
+    handleTime: PropTypes.func,
+    handleRem: PropTypes.func,
+    handleIsRead: PropTypes.func,
+    isRead: PropTypes.bool,
+    handleBooked: PropTypes.func,
+    isBooked: PropTypes.bool
 }
 export default Blog;
